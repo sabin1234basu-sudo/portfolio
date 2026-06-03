@@ -5,177 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ - バス　サビン</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 50px;
-            padding: 40px 20px;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-        
-        .project-header {
-            padding: 25px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .project-header h2 {
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-        
-        .project-header p {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-        
-        .project-body {
-            padding: 25px;
-        }
-        
-        .language-stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .language-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .language-bar {
-            width: 200px;
-            height: 8px;
-            background: #eee;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .language-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            border-radius: 4px;
-        }
-        
-        .language-name {
-            font-weight: bold;
-            color: #333;
-            min-width: 80px;
-        }
-        
-        .language-percent {
-            color: #666;
-            font-size: 0.9em;
-            min-width: 50px;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: opacity 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 0.95em;
-        }
-        
-        .btn:hover {
-            opacity: 0.8;
-        }
-        
-        .btn-secondary {
-            background: #f0f0f0;
-            color: #333;
-        }
-        
-        .btn-secondary:hover {
-            background: #e0e0e0;
-        }
-        
-        footer {
-            text-align: center;
-            color: white;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-top: 50px;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .language-bar {
-                width: 150px;
-            }
-        }
+       body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+/* Cards */
+.project-card {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Titles */
+.project-card h2 {
+    margin-bottom: 5px;
+}
+
+/* Buttons */
+.project-links {
+    margin-top: 10px;
+}
+
+a {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+a:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+}
+
     </style>
 </head>
 <body>
