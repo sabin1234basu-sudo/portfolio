@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ - sabin1234basu-sudo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .project-header {
+            padding: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .project-header h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        
+        .project-header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .project-body {
+            padding: 25px;
+        }
+        
+        .language-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .language-bar {
+            width: 200px;
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .language-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+        }
+        
+        .language-name {
+            font-weight: bold;
+            color: #333;
+            min-width: 80px;
+        }
+        
+        .language-percent {
+            color: #666;
+            font-size: 0.9em;
+            min-width: 50px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95em;
+        }
+        
+        .btn:hover {
+            opacity: 0.8;
+        }
+        
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .language-bar {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 ポートフォリオ</h1>
+            <p>sabin1234basu-sudo のプロジェクト集</p>
+        </header>
+        
+        <div class="portfolio-grid">
+            <!-- プロジェクト 1: searchs -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>🔍 Searchs</h2>
+                    <p>検索ツール</p>
+                </div>
+                <div class="project-body">
+                    <p style="margin-bottom: 15px; color: #666;">シンプルで使いやすい検索ツールです。</p>
+                    <div class="language-stats">
+                        <div class="language-item">
+                            <span class="language-name">HTML</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="language-percent">100%</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sabin1234basu-sudo/searchs" class="btn">リポジトリ</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- プロジェクト 2: magic-chess -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>♟️ Magic Chess</h2>
+                    <p>チェスゲーム</p>
+                </div>
+                <div class="project-body">
+                    <p style="margin-bottom: 15px; color: #666;">インタラクティブなチェスゲーム。JavaScriptで開発されています。</p>
+                    <div class="language-stats">
+                        <div class="language-item">
+                            <span class="language-name">JavaScript</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 62.6%"></div>
+                            </div>
+                            <span class="language-percent">62.6%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">CSS</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 21.3%"></div>
+                            </div>
+                            <span class="language-percent">21.3%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">HTML</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 16.1%"></div>
+                            </div>
+                            <span class="language-percent">16.1%</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sabin1234basu-sudo/magic-chess" class="btn">リポジトリ</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- プロジェクト 3: calculator -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>🧮 Calculator</h2>
+                    <p>電卓アプリケーション</p>
+                </div>
+                <div class="project-body">
+                    <p style="margin-bottom: 15px; color: #666;">基本的な計算機能を備えたWebアプリケーションです。</p>
+                    <div class="language-stats">
+                        <div class="language-item">
+                            <span class="language-name">JavaScript</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 38.8%"></div>
+                            </div>
+                            <span class="language-percent">38.8%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">CSS</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 31.8%"></div>
+                            </div>
+                            <span class="language-percent">31.8%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">HTML</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 29.4%"></div>
+                            </div>
+                            <span class="language-percent">29.4%</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sabin1234basu-sudo/calculator" class="btn">リポジトリ</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- プロジェクト 4: task-manager-apps -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>✓ Task Manager</h2>
+                    <p>タスク管理アプリケーション</p>
+                </div>
+                <div class="project-body">
+                    <p style="margin-bottom: 15px; color: #666;">日々のタスクを効率的に管理できるアプリケーションです。</p>
+                    <div class="language-stats">
+                        <div class="language-item">
+                            <span class="language-name">JavaScript</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 49.2%"></div>
+                            </div>
+                            <span class="language-percent">49.2%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">CSS</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 31.1%"></div>
+                            </div>
+                            <span class="language-percent">31.1%</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name">HTML</span>
+                            <div class="language-bar">
+                                <div class="language-fill" style="width: 19.7%"></div>
+                            </div>
+                            <span class="language-percent">19.7%</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sabin1234basu-sudo/task-manager-apps" class="btn">リポジトリ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 sabin1234basu-sudo. すべての権利は保有されています。</p>
+            <p>GitHub: <a href="https://github.com/sabin1234basu-sudo" style="color: white; text-decoration: underline;">github.com/sabin1234basu-sudo</a></p>
+        </footer>
+    </div>
+</body>
+</html>
